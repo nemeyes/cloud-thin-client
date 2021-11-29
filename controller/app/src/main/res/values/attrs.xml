@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="GameControllerView">
+        <attr name="GCV_buttonImage" format="reference" />
+        <attr name="GCV_buttonColor" format="color"/>
+        <attr name="GCV_borderColor" format="color"/>
+        <attr name="GCV_borderAlpha" format="integer"/>
+        <attr name="GCV_backgroundColor" format="color"/>
+        <attr name="GCV_borderWidth" format="dimension"/>
+        <attr name="GCV_fixedCenter" format="boolean"/>
+        <attr name="GCV_autoReCenterButton" format="boolean"/>
+        <attr name="GCV_buttonStickToBorder" format="boolean"/>
+        <attr name="GCV_enabled" format="boolean"/>
+        <attr name="GCV_buttonSizeRatio" format="fraction"/>
+        <attr name="GCV_backgroundSizeRatio" format="fraction"/>
+        <attr name="GCV_buttonDirection">
+            <flag name="horizontal" value="-1"/>
+            <flag name="both" value="0"/>
+            <flag name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

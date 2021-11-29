@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:hardwareAccelerated="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mixedtek.elastics.controller.MainActivity">
+
+    <Button
+        android:id="@+id/discovery"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Search Player"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/q"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Q"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/w"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:textSize="30dp"
+        android:text="W"
+        android:layout_toRightOf="@id/q"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:textSize="30dp"
+        android:text="E"
+        android:layout_toRightOf="@id/w"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/r"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:textSize="30dp"
+        android:text="R"
+        android:layout_toRightOf="@id/e"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/a"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:text="A"
+        android:layout_below="@id/q"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/s"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/w"
+        android:layout_toRightOf="@id/a"
+        android:textSize="30dp"
+        android:text="S"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/d"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/e"
+        android:layout_toRightOf="@id/s"
+        android:textSize="30dp"
+        android:text="D"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/f"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/e"
+        android:layout_toRightOf="@id/d"
+        android:textSize="30dp"
+        android:text="F"
+        android:gravity="center"/>
+
+    <!--Button
+        android:id="@+id/u"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/e"
+        android:layout_toRightOf="@id/f"
+        android:textSize="30dp"
+        android:text="U"
+        android:gravity="center"//-->
+
+    <Button
+        android:id="@+id/lc"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:text="LCtrl"
+        android:gravity="center"
+        android:layout_below="@id/a"/>
+
+    <Button
+        android:id="@+id/ls"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/lc"
+        android:textSize="20dp"
+        android:text="LShift"
+        android:gravity="center"
+        android:layout_below="@id/s"/>
+
+    <Button
+        android:id="@+id/space"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/ls"
+        android:textSize="20dp"
+        android:text="Space"
+        android:gravity="center"
+        android:layout_below="@id/d"/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/textView_angle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0°"/>
+
+        <TextView
+            android:id="@+id/textView_strength_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView_angle_right"
+            android:text="0%"/>
+
+
+        <TextView
+            android:id="@+id/textView_coordinate_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView_strength_right"
+            android:text="x050:x050"/>
+
+
+        <com.mixedtek.elastics.controller.view.GameControllerView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/joystickView_right"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            custom:GCV_borderWidth="0dp"
+            custom:GCV_backgroundColor="#42000000"
+            custom:GCV_borderColor="#42000000"
+            custom:GCV_buttonColor="#52000000"/>
+
+        <Button
+            android:id="@+id/rb"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"
+            android:text="RB"
+            android:gravity="center"
+            android:layout_below="@id/joystickView_right"/>
+
+        <Button
+            android:id="@+id/lb"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@id/rb"
+            android:textSize="20dp"
+            android:text="LB"
+            android:gravity="center"
+            android:layout_below="@id/joystickView_right"/>
+
+    </RelativeLayout>
+</RelativeLayout>
